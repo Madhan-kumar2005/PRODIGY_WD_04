@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Navigation Styles */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ff5722;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffe082;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #ff5722, #ff9800, #ffc107);
+    color: white;
+    padding: 20px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: gradientAnimation 10s ease infinite;
+}
+
+.hero .profile-pic {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.hero .profile-pic:hover {
+    transform: rotate(360deg);
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin: 0;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero p {
+    font-size: 1.8em;
+    margin: 15px 0;
+    color: #ffe082;
+    animation: fadeIn 3s ease-in;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+section h2 {
+    font-size: 2.8em;
+    color: #ff5722;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #ff9800;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+section p, section ul {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #444;
+    animation: slideIn 2s ease;
+}
+
+/* Horizontal Line Style */
+hr {
+    border: 0;
+    height: 4px; /* Increased thickness */
+    background: linear-gradient(to right, #ff5722, #ff9800);
+    margin: 50px 0;
+    border-radius: 2px; /* Slightly rounded corners */
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.skill {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Projects Section */
+.project {
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    font-size: 2em;
+    color: #ff5722;
+    margin-bottom: 15px;
+}
+
+.project p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Contact Section */
+#contact ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#contact ul li {
+    font-size: 1.3em;
+    margin: 12px 0;
+    color: #444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
